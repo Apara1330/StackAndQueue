@@ -17,16 +17,18 @@ namespace StackAndQueue
         public static void CallStackQueue()
         {
             LinkListStack linkedListStack = new LinkListStack();
-            bool CONTINUE = true;
+            LinkListQueue linkedListQueue = new LinkListQueue();
+
+          bool CONTINUE = true;
             while (CONTINUE)
             {
                 Console.WriteLine("\nEnter your option!");
-                Console.WriteLine("1 for Stack , 2 for Exit");
+                Console.WriteLine("1 for Stack , 2 for Queue, 3 for Exit");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
                 {
                     case 1:
-                        Console.WriteLine("Creating A Stack");
+                        Console.WriteLine("Creating a Stack");
                         linkedListStack.Push(70);
                         linkedListStack.Push(30);
                         linkedListStack.Push(56);
@@ -42,6 +44,13 @@ namespace StackAndQueue
                         linkedListStack.Display();
                         break;
                     case 2:
+                        Console.WriteLine("\nCreating a Queue\n");
+                        linkedListQueue.Enqueue(56);
+                        linkedListQueue.Enqueue(30);
+                        linkedListQueue.Enqueue(70);
+                        linkedListQueue.Display();
+                        break;
+                    case 3:
                         CONTINUE = false;
                         break;
                     default:
