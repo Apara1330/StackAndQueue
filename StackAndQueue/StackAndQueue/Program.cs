@@ -31,6 +31,15 @@ namespace StackAndQueue
                         linkedListStack.Push(30);
                         linkedListStack.Push(56);
                         linkedListStack.Display();
+                        Console.WriteLine("\nPeakOperation\n");
+                        linkedListStack.Peak();
+                        linkedListStack.Display();
+                        Console.WriteLine("\nPopOperation\n");
+                        linkedListStack.Pop();
+                        linkedListStack.Display();
+                        Console.WriteLine("\nPopTillStackBecomesEmpty\n");
+                        linkedListStack.IsEmpty();
+                        linkedListStack.Display();
                         break;
                     case 2:
                         CONTINUE = false;

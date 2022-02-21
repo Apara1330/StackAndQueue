@@ -33,6 +33,38 @@ namespace StackAndQueue
                 temp = temp.next;
             }
         }
+        
+        public void Peak()//to find the top element of stack
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is Peak element of Stack", top.data);
+        }
+        
+        public void Pop()//to remove the top element from stack.
+        {
+            Peak();
+            int deleteNode = this.top.data;
+            this.top = top.next;
+            Console.WriteLine("{0} Poped from stack", deleteNode);
+        }
+        public void IsEmpty()// to pop all the elements from stack untill stack is empty.
+
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            while (top != null)
+            {
+                Pop();
+            }
+            Console.WriteLine("All element Poped from Stack!");
+        }
     }
 }
     
